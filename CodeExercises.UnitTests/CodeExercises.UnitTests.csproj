@@ -19,4 +19,12 @@
   <ItemGroup>
     <ProjectReference Include="..\CodeExercises\CodeExercises.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="DataStructureTests\" />
+    <None Remove="ExerciseTests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataStructureTests\" />
+    <Folder Include="ExerciseTests\" />
+  </ItemGroup>
 </Project>
