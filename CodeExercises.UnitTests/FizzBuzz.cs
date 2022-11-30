@@ -1,11 +1,9 @@
-﻿using NUnit.Framework;
-using CodeExercises.Exercises;
+﻿using CodeExercises.Exercises;
 
 namespace CodeExercises.UnitTests;
 
-public class Tests
+public class FizzBuzzTests
 {
-
     [Test]
     [TestCase(0)]
     [TestCase(15)]
