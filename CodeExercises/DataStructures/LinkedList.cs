@@ -137,5 +137,46 @@ public class SinglyLinkedList
         }
         return array;
     }
+
+    public void reverse()
+    {
+        if (isEmpty()) return;
+
+        var previous = first;
+        var current = first.Next;
+        while(current != null)
+        {
+            var next = current.Next;
+            current.Next = previous;
+            previous = current;
+            current = next;
+        }
+
+        last = first;
+        last.Next = null;
+        first = previous;
+
+    }
+
+    public int getKthFromEnd(int k)
+    {
+        var a = first;
+        var b = first;
+
+        for (int i = 0; i < k - 1; i++)
+        {
+            b = b.Next;
+            if (b == null)
+                throw new ArgumentOutOfRangeException();
+        }
+            
+
+        while (b != last)
+        {
+            a = a.Next;
+            b = b.Next;
+        }
+        return a.Value;
+    }
 }
 
