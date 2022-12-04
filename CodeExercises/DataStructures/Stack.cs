@@ -19,10 +19,18 @@ public class Stack<T>
     private readonly List<T> _list = new List<T>();
     public int Count => _list.Count;
 
+    public bool isEmpty()
+    {
+        return _list.Count == 0;
+    }
+
     public void Push(T obj)
     {
         if (obj == null)
             throw new ArgumentNullException();
+
+        if (Count == _list.Count)
+            throw new StackOverflowException();
 
         _list.Add(obj);
     }
