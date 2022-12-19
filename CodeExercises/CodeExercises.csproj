@@ -10,9 +10,11 @@
   <ItemGroup>
     <None Remove="Exercises\" />
     <None Remove="DataStructures\" />
+    <None Remove="Algorithms\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Exercises\" />
     <Folder Include="DataStructures\" />
+    <Folder Include="Algorithms\" />
   </ItemGroup>
 </Project>
